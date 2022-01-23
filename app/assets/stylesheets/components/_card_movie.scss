@@ -1,0 +1,61 @@
+.card-movie-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.card-movie {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.card-image-box {
+  height: 200px;
+  background-image: asset-url('empty_cinema.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  padding: 2px;
+}
+
+.card-movie-title {
+  padding-left: 15px;
+}
+
+.card-movie-text {
+  padding: 0 15px;
+}
+
+.card-movie-comment {
+  padding: 0 15px;
+  color: darkgrey;
+  font-style: italic;
+  i {
+    color: black;
+  }
+}
+
+.card-movie-rating {
+  color: darkgrey;
+  padding: 0 15px;
+  i {
+    color: rgb(255, 217, 0);
+  }
+}
+.bookmark-delete {
+  padding: 0 15px;
+  color: $red;
+  font-size: 16px;
+  &:hover {
+    font-style: italic;
+    text-decoration: none;
+    color: $red;
+    }
+}
+
+.movie-card-footer {
+  display: flex;
+  justify-content: space-between;
+}

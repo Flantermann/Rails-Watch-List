@@ -1,6 +1,22 @@
+<div class="banner-list">
+  <h1 class="banner-list-text"> <%= @list.name %></h1>
+  <%= link_to " + Add Movie", new_list_bookmark_path(@list), class:"btn-banner-list" %>
+</div>
+
 <div class="container">
-  <div>
-    <h3><%= @list.name %></h3>
+  <div class="card-movie-grid">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card-movie">
+        <div class="card-image-box";>
+        </div>
+        <h3 class="card-movie-title"> <%= bookmark.movie.title %> </h3>
+        <p class="card-movie-rating"> <%= bookmark.movie.rating %> <i class="fas fa-star"></i></p>
+        <p class="card-movie-text"> <%= bookmark.movie.overview %> </p>
+        <div class="movie-card-footer">
+          <p class="card-movie-comment"> <i class="far fa-comment"></i> "<%= bookmark.comment %>" </p>
+          <%= link_to "delete", bookmark_path(bookmark), class:"bookmark-delete", method: :delete, data: { confirm: "Are you sure?" }%>
+        </div>
+      </div>
+    <% end %>
   </div>
-   <%= link_to "All my lists", lists_path, class:"btn-success p-3" %>
 </div>

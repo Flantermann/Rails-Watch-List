@@ -1,2 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.text-centered {
+  text-align: center;
+  padding: 20px;
+  color: $red;
+}
