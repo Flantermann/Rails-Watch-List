@@ -31,7 +31,6 @@
 }
 
 .btn-banner {
-  position: absolute;
   font-size: 20px;
   color: $red;
   background-color: white;
@@ -39,9 +38,6 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   transition: color 0.5s ease;
   &:hover {
     color: white;
@@ -52,7 +48,6 @@
 }
 
 .btn-banner-list {
-  position: absolute;
   font-size: 20px;
   color: $red;
   background-color: white;
@@ -60,9 +55,6 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   transition: color 0.5s ease;
   &:hover {
     color: white;

@@ -1,6 +1,8 @@
 <div class="banner-list">
-  <h1 class="banner-list-text"> <%= @list.name %></h1>
-  <%= link_to " + Add Movie", new_list_bookmark_path(@list), class:"btn-banner-list" %>
+  <div class="container">
+    <h1 class="banner-list-text"> <%= @list.name %></h1>
+    <%= link_to " + Add Movie", new_list_bookmark_path(@list), class:"btn-banner-list" %>
+  </div>
 </div>
 
 <div class="container">
