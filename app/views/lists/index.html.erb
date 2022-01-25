@@ -10,7 +10,7 @@
   </div>
   <div class="card-list-grid">
     <% @lists.each do |list| %>
-      <div class="card-list-image">
+      <div class="card-list-image", style="background-image: url('<%= cl_image_path list.photo.key %>')">
         <div class="card-list-content">
           <%= link_to list.name, list_path(list), class:"card-list-text" %>
         </div>
@@ -26,6 +26,5 @@
   <br>
   <br>
   <br>
-
 
 </div>
