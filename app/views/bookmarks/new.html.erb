@@ -2,8 +2,8 @@
   <h1><%= "Add a movie to #{@list.name}" %></h1>
   <br>
   <%= simple_form_for [ @list, @bookmark ] do |f| %>
-    <%= f.input :comment %>
-    <%= f.association :movie %>
+     <%= f.association :movie %>
+     <%= f.input :comment %>
     <p><%= link_to "Back", list_path(@list), class: "btn btn-secondary" %></p>
     <p><%= f.submit "Add movie", class: "btn btn-primary" %></p>
   <% end %>

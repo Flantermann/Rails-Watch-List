@@ -5,16 +5,35 @@
   margin-bottom: 30px;
 }
 
-.background-image {
-  position: relative;
-  text-align: center;
+.card-list-image {
+  background-image: asset-url('default_list.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.centered-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.card-list-content {
+  height: 26vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-list-delete {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 8px;
+}
+
+.card-list-text {
+  font-size: 30px;
   color: white;
   text-shadow: 1px 1px 1px #838383;
   &:hover {
@@ -24,10 +43,6 @@
 }
 
 .delete-text {
-  position: absolute;
-  top: 85%;
-  left: 78%;
-  // transform: translate(-50%, -50%);
   color: white;
   font-size: 16px;
   &:hover {

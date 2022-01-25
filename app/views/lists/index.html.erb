@@ -1,6 +1,6 @@
-<div class="banner">
+ <div class="banner">
   <div class="container">
-    <h1 class="banner-text">Create your favourite movie lists</h1>
+    <h1 class="banner-text" id="banner-typed-text"></h1>
     <%= link_to " + New list", new_list_path, class:"btn-banner" %>
   </div>
 </div>
@@ -10,12 +10,15 @@
   </div>
   <div class="card-list-grid">
     <% @lists.each do |list| %>
-      <div class="background-image">
-        <%= image_tag "default_list.jpg", width:"100%" %>
-        <h3> <%= link_to list.name, list_path(list), class:"centered-text" %> </h3>
-        <%= link_to list_path(list), class:"delete-text", method: :delete, data: { confirm: "Are you sure?" }  do %>
-          <p> delete <span><i class="fas fa-trash-alt"></i></span> </p>
-        <% end %>
+      <div class="card-list-image">
+        <div class="card-list-content">
+          <%= link_to list.name, list_path(list), class:"card-list-text" %>
+        </div>
+        <div class="card-list-delete">
+          <%= link_to list_path(list), class:"delete-text", method: :delete, data: { confirm: "Are you sure?" }  do %>
+            <p> delete <span><i class="fas fa-trash-alt"></i></span> </p>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>

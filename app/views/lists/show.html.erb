@@ -9,8 +9,7 @@
   <div class="card-movie-grid">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card-movie">
-        <div class="card-image-box";>
-        </div>
+        <div class="card-image-box", style="background-image: url(<%= bookmark.movie.poster_url %>);"></div>
         <h3 class="card-movie-title"> <%= bookmark.movie.title %> </h3>
         <p class="card-movie-rating"> <%= bookmark.movie.rating %> <i class="fas fa-star"></i></p>
         <p class="card-movie-text"> <%= bookmark.movie.overview %> </p>

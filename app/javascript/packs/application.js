@@ -9,6 +9,14 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap';
 
+import { loadDynamicBannerText } from '../components/banner';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  // [...]
+  loadDynamicBannerText();
+});
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
