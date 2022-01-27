@@ -4,7 +4,7 @@
   </div>
 
   <div class="row">
-    <div class="col-6">
+    <div class="col-md-6">
       <%= simple_form_for(@list) do |f| %>
         <%= f.input :name, placeholder: 'Add a list name' %>
         <%= f.input :photo, as: :file, input_html: {class: "d-none"}, label_html: {class: "upload-photo"}, label: "Upload a list photo" %>
