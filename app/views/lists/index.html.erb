@@ -10,7 +10,11 @@
   </div>
   <div class="card-list-grid">
     <% @lists.each do |list| %>
-      <div class="card-list-image", style="background-image: url('<%= cl_image_path list.photo.key %>')">
+      <% if list.photo.attached? %>
+        <div class="card-list-image", style="background-image: url('<%= cl_image_path list.photo.key %>')">
+      <% else %>
+        <div class="card-list-image", style="background-image: asset_url('default_list.jpg')">
+      <% end %>
         <div class="card-list-content">
           <%= link_to list.name, list_path(list), class:"card-list-text" %>
         </div>
