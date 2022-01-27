@@ -7,8 +7,8 @@
     <div class="col-6">
       <%= simple_form_for(@list) do |f| %>
         <%= f.input :name, placeholder: 'Add a list name' %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit "Create", class: "btn btn-blue" %>
+        <%= f.input :photo, as: :file, input_html: {class: "d-none"}, label_html: {class: "upload-photo"}, label: "Upload a list photo" %>
+        <%= f.submit "Create list", class: "btn btn-blue" %>
       <% end %>
     </div>
   </div>
