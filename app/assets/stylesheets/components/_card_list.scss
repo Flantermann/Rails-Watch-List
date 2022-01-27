@@ -5,6 +5,14 @@
   margin-bottom: 30px;
 }
 
+@media(max-width: 768px) {
+  .card-list-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    margin-bottom: 12px;
+  }
+}
+
 .card-list-image {
   // background-image: asset-url('default_list.jpg');
   background-size: cover;

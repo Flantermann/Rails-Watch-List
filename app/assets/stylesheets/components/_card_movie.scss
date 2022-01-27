@@ -5,6 +5,23 @@
   margin-bottom: 30px;
 }
 
+@media(max-width: 768px) {
+  .card-movie-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .card-movie-title {
+    font-size: 20px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+}
+
+
 .card-movie {
   border: 1px solid lightgrey;
   border-radius: 10px;
